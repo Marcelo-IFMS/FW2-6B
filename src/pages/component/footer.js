@@ -1,3 +1,5 @@
+import { Container } from "react-bootstrap";
+
 export default function Footer() {
-    return <div>IFMS-Dourados</div>
+    return <Container>IFMS-Dourados</Container>
 }
