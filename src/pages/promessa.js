@@ -9,25 +9,12 @@ export default function Promessa(){
     setTimeout(() => {   
         setPrometido("é uma dívida")
         document.title="Promessa é dívida"
-    }, 2000);
+    }, 4000);
     return <>
     <Menu />
     <Container>
-        Promessa {prometido}
+        Promessa {prometido==="" ? "<carregando>" : prometido}
     </Container>
     <Footer />
     </>
 }
-
-
-
-
-
-
-
-
-
-
-/**
- * {prometido===""?<img src="loading.gif" width="100" height={40}/>:prometido}
- */
