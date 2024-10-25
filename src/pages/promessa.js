@@ -13,8 +13,21 @@ export default function Promessa(){
     return <>
     <Menu />
     <Container>
-        Promessa {prometido===""?<img src=""/>:prometido}
+        Promessa {prometido}
     </Container>
     <Footer />
     </>
 }
+
+
+
+
+
+
+
+
+
+
+/**
+ * {prometido===""?<img src="loading.gif" width="100" height={40}/>:prometido}
+ */
