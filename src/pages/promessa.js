@@ -7,13 +7,13 @@ export default function Promessa(){
 
     const [prometido, setPrometido] = useState("")
     setTimeout(() => {   
-        setPrometido("é uma dívida")
+        setPrometido("tem que pagar")
         document.title="Promessa é dívida"
-    }, 4000);
+    }, 1000);
     return <>
     <Menu />
     <Container>
-        Promessa {prometido==="" ? "<carregando>" : prometido}
+        Promessa {prometido === "" ? <img src="./loading.gif" width={100} height={40}/> : prometido}
     </Container>
     <Footer />
     </>
