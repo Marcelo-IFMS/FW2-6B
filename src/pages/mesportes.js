@@ -2,7 +2,7 @@ import { Container, Table } from "react-bootstrap";
 import Menu from "./component/navbar";
 import Footer from "./component/footer";
 
-export default function mesportes() {
+export default function mesportes({produtos}) {
   return (
     <>
       <Menu />
@@ -22,16 +22,16 @@ export default function mesportes() {
               </tr>
             </thead>
             <tbody>
-{/* aqui será inserido o 
-laço de repetição para os produtos */}
+             {produtos.map(produto =>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{produto.id}</td>
+                <td>{produto.titulo}</td>
+                <td>{produto.categoria}</td>
+                <td>{produto.descricao}</td>
+                <td>{produto.preco}</td>
               </tr>
-{/* fim laço */}
+             )}
+             
             </tbody>
           </Table>
         </Container>
@@ -39,4 +39,11 @@ laço de repetição para os produtos */}
       <Footer />
     </>
   );
+}
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch('http://localhost:3000/api/produtos/data')
+  const repo = await res.json()
+  // Pass data to the page via props
+  return { props: { produtos:repo } }
 }

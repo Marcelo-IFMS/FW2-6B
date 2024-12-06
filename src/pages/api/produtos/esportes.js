@@ -1,8 +1,8 @@
 export const esportes = [
     {
         "id": 1,
-        "titulo": ,
-        "categoria": "Futebol","Bola de Futebol"
+        "titulo": "Bola de Futebol",
+        "categoria": "Futebol",
         "descricao": "Bola de futebol oficial tamanho 5 para jogos profissionais.",
         "preco": 89.90
     },
