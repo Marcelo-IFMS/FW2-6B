@@ -1,6 +1,7 @@
 import { Container, Table } from "react-bootstrap";
 import Menu from "./component/navbar";
 import Footer from "./component/footer";
+import Card from "./card";
 
 export default function Cardesportes({ produtos }) {
   return (
@@ -10,20 +11,12 @@ export default function Cardesportes({ produtos }) {
         <Container className="text-center rounded-pill border border-primary col-8">
           Produtos de esportes
         </Container>
-        <Container>
+        <Container>          
           <div class="row">
             {produtos.map((produto) => (
-              <div class="col-sm-3 mb-3 mb-sm-0">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">{produto.titulo}</h5>
-                    <p class="card-text">{produto.descricao}</p>
-                    <a href="#" class="btn btn-primary">
-                      {produto.preco}
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <Card titulo={produto.titulo} 
+              descricao={produto.descricao} 
+              preco={produto.preco}/>
             ))}
           </div>
         </Container>
