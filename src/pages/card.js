@@ -7,10 +7,7 @@ export default function Card(prop) {
             <h5 class="card-title">{prop.titulo}</h5>
             <p class="card-text">{prop.descricao}</p>
             <a href="#" class="btn btn-primary">
-              {prop.preco.toLocaleString("pt-br", {
-                style: "currency",
-                currency: "BRL",
-              })}
+              {prop.preco}
             </a>
           </div>
         </div>
